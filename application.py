@@ -19,29 +19,42 @@ while seguir == True:
                 print("\nYou guessed it! The number was %d\n" % (number))
                 print("And it only took you %d tries!\n" % (tries + 1))
                 print("Congratulations!\n")
-                break
+                try:
+                    print("\nYou want to play again?")
+                    answer = raw_input("Write your answer here: \n")
+                    if answer == "Yes":
+                        break
+                    elif answer == "No":
+                        seguir = False
+                        break
+                    else:
+                        print("\nOnly 'Yes' or 'No'")
+                except:
+                    print("Error, sorry, contact management!")
+                    seguir = False
+                    break
         except:
             print("Care only enter numbers!\n")
             print("The error is taken as a shift!\n")
     else:
         print("You have failed all your attempts!")
         print("The number was: "), number
-        while True:
+        while seguir == True:
             try:
-                print("You want to play again?\n")
-                write = raw_input("Write your answer here: \n")
-                if write == Si:
+                print("\nYou want to play again?")
+                answer = raw_input("Write your answer here: \n")
+                if answer == "Yes":
                     break
-                elif write == no:
+                elif answer == "No":
                     seguir = False
                     break
                 else:
-                    print("Only 'yes' or 'no'")
+                    print("\nOnly 'Yes' or 'No'")
             except:
                 print("Error, sorry, contact management!")
                 seguir = False
                 break
     try:
-        input("\nPress enter to exit.\n")
+        input("\nPress enter to play if you choose 'Yes' or exit if you choose 'No'!\n")
     except:
         pass
