@@ -3,7 +3,7 @@ BOUNDS = (1, 100)
 TRIES_ALLOWED = 10
 number = random.randint(*BOUNDS)
 seguir = bool(True)
-while seguir == True
+while seguir == True:
     print("Welcome to 'Guess a Number'!\n")
     print("I think a number from %d to %d." % BOUNDS)
     print("You will try to guess in the fewest possible attempts, are you ready?\n")
@@ -26,6 +26,21 @@ while seguir == True
     else:
         print("You have failed all your attempts!")
         print("The number was: "), number
+        while True:
+            try:
+                print("You want to play again?\n")
+                write = raw_input("Write your answer here: \n")
+                if write == Si:
+                    break
+                elif write == no:
+                    seguir = False
+                    break
+                else:
+                    print("Only 'yes' or 'no'")
+            except:
+                print("Error, sorry, contact management!")
+                seguir = False
+                break
     try:
         input("\nPress enter to exit.\n")
     except:
