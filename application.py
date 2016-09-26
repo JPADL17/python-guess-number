@@ -9,7 +9,7 @@ while seguir == True:
     print("You will try to guess in the fewest possible attempts, are you ready?\n")
     for tries in range(TRIES_ALLOWED):
         try:
-            print tries
+            print tries + 1
             guess = int(input("Take a number: "))
             if guess > number:
                 print("Too High...\n")
