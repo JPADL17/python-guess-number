@@ -49,7 +49,7 @@ while seguir == True:
                     seguir = False
                     break
                 else:
-                    print("\nOnly 'Yes' or 'No'")
+                    print("\nYou only write 'Yes' or 'No'")
             except:
                 print("Error, sorry, contact management!")
                 seguir = False
